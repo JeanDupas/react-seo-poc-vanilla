@@ -5,6 +5,7 @@ import { Container, Grid } from "@mui/material";
 import Header from "components/header/Header";
 import { API_HOST, COINS_DETAIL } from "utils/constants";
 import { useParams } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 function Home() {
   const [coin, setCoin] = useState<any>(null);
@@ -12,8 +13,6 @@ function Home() {
   const [date, setDate] = useState(new Date());
 
   const { id } = useParams();
-  console.log("id", id);
-  console.log("id", useParams());
 
   useEffect(() => {
     fetch(`${API_HOST}${COINS_DETAIL}/${id}`)
@@ -26,6 +25,9 @@ function Home() {
 
   return (
     <div>
+      <Helmet>
+        <title>{coin && coin.name ? coin.name : "waiting"}</title>
+      </Helmet>
       <Header onChange={setSearch} />
       <Container sx={{ padding: "12px 0" }}>
         <Grid

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { CircularProgress, Container, Grid } from "@mui/material";
+import { Helmet } from "react-helmet";
 
 import Header from "components/header/Header";
 import Table from "components/table/Table";
@@ -30,6 +31,9 @@ function Home() {
 
   return (
     <div className="main-container">
+        <Helmet>
+            <title>Voici la liste !</title>
+        </Helmet>
       <Header onChange={setSearch} />
       {loading && (
         <Grid
