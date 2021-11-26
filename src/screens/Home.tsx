@@ -31,9 +31,9 @@ function Home() {
 
   return (
     <div className="main-container">
-        <Helmet>
-            <title>Voici la liste !</title>
-        </Helmet>
+      <Helmet>
+        <title>Voici la liste !</title>
+      </Helmet>
       <Header onChange={setSearch} />
       {loading && (
         <Grid

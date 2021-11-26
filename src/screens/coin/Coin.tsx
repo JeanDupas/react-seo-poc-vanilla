@@ -5,7 +5,7 @@ import { Container, Grid } from "@mui/material";
 import Header from "components/header/Header";
 import { API_HOST, COINS_DETAIL } from "utils/constants";
 import { useParams } from "react-router-dom";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const [coin, setCoin] = useState<any>(null);
