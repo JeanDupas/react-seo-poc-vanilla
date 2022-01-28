@@ -77,7 +77,7 @@ export default function SearchAppBar({ onChange }: Props) {
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
             <Link to="/" style={{}}>
-              SUPER-CRYPTO
+              Le bon coin
             </Link>
           </Typography>
           <Search>
